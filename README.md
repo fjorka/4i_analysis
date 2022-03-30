@@ -26,10 +26,20 @@ General idea:
    * allows calculation of transformations on downscaled images
    * output directory will be created automatically (if its parent directory exist)
 
-##### 03_align_from_transform.ipynb
+##### 03_align_from_transform_single.ipynb
    * applies transformations to all original images
    * works for a single well 
    * allows visualization of alignment
+   * output directory will be created automatically (if its parent directory exist)
+
+##### 04_create_mask.ipynb
+   * enables creation of punchmask (a mask of regions to be excluded from the analysis because of the artefacts)
+   * ex. output subdirectory - masks
+   * output directory will be created automatically (if its parent directory exist)
+
+##### 05_calculate_cell_properties.ipynb
+   * calculates properties of individual segmented nuclei through all the intensity channels
+   * ex. output subdirectory - cell_data
    * output directory will be created automatically (if its parent directory exist)
 
 Alternatively:
@@ -37,6 +47,11 @@ Alternatively:
    * segments and saves masks (ex. im_to_segment)
    * this notebook is adjusted to be run on Google Colab (while data are temporarily stored on Google Drive)
    * the advantage is access to GPU which will usually speed up segmentation 5-10 times
+   * output directory will be created automatically (if its parent directory exist)
+
+##### 03_align_from_transform_list.ipynb
+   * enables processing of a list of wells
+   * doesn't support visualization of the alignment
    * output directory will be created automatically (if its parent directory exist)
 
 
@@ -111,9 +126,10 @@ Alternatively:
       - Round_01_wellA2_DNA.tif
       - Round_01_wellA2_p27.tif
       - Round_01_wellA2_p53.tif
+- masks
+   * mask_A1.pkl
+   * mask_A2.pkl
+- cell_data
+   * cell_data_A1.pkl
+   * cell_data_A2.pkl
 - info_exp.csv
- 
-
-
-
-
