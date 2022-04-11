@@ -16,7 +16,7 @@ General idea:
    * saves images prepared for the segmentation (ex. im_to_segment)
    * output directories will be created automatically (if their parent directories exist)
 
-##### 01_cellpose_segmentation_local.ipynb
+##### 01_cellpose_segmentation_local.ipynb (01_cellpose_segmentation_colab.ipynb)
    * segments and saves masks (ex. im_to_segment)
    * this segmentation is performed on the local workstation
    * output directory will be created automatically (if its parent directory exist)
@@ -26,18 +26,22 @@ General idea:
    * allows calculation of transformations on downscaled images
    * output directory will be created automatically (if its parent directory exist)
 
-##### 03_align_from_transform_single.ipynb
+##### 03_find_transformation_manually.ipynb
+   * uses Affinder to find a transformation a the problematic well/round (https://github.com/jni/affinder)
+   * replaces transformation in the pkl file
+
+##### 04_align_from_transform_single.ipynb (04_align_from_transform_list.ipynb)
    * applies transformations to all original images
    * works for a single well 
    * allows visualization of alignment
    * output directory will be created automatically (if its parent directory exist)
 
-##### 04_create_mask.ipynb
+##### 05_create_mask.ipynb 
    * enables creation of punchmask (a mask of regions to be excluded from the analysis because of the artefacts)
    * ex. output subdirectory - masks
    * output directory will be created automatically (if its parent directory exist)
 
-##### 05_calculate_cell_properties.ipynb
+##### 06_calculate_cell_properties.ipynb
    * calculates properties of individual segmented nuclei through all the intensity channels
    * ex. output subdirectory - cell_data
    * output directory will be created automatically (if its parent directory exist)
@@ -49,7 +53,7 @@ Alternatively:
    * the advantage is access to GPU which will usually speed up segmentation 5-10 times
    * output directory will be created automatically (if its parent directory exist)
 
-##### 03_align_from_transform_list.ipynb
+##### 04_align_from_transform_list.ipynb
    * enables processing of a list of wells
    * doesn't support visualization of the alignment
    * output directory will be created automatically (if its parent directory exist)
