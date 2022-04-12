@@ -17,7 +17,7 @@ General idea:
    * output directories will be created automatically (if their parent directories exist)
 
 ##### 01_cellpose_segmentation_local.ipynb (01_cellpose_segmentation_colab.ipynb)
-   * uses ![Cellpose](https://github.com/MouseLand/cellpose) segmentation
+   * uses [Cellpose](https://github.com/MouseLand/cellpose) segmentation
    * segments and saves masks (ex. im_to_segment)
    * this segmentation is performed on the local workstation
    * output directory will be created automatically (if its parent directory exist)
@@ -28,7 +28,7 @@ General idea:
    * output directory will be created automatically (if its parent directory exist)
 
 ##### 03_find_transformation_manually.ipynb
-   * uses ![Affinder](https://github.com/jni/affinder) to find a transformation a the problematic well/round
+   * uses [Affinder](https://github.com/jni/affinder) to find a transformation a the problematic well/round
    * replaces transformation in the pkl file
 
 ##### 04_align_from_transform_single.ipynb (04_align_from_transform_list.ipynb)
